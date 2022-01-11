@@ -1,0 +1,206 @@
+* {
+    border-radius: 0px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #C9D1D9;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+body.dark {
+    background-color: #010409;
+}
+
+.main {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 310px;
+    height: 490px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F6F8FA;
+    border: 1px solid #D8DEE4;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+}
+
+body.dark .login {
+    background-color: #0D1117;
+    border: 1px solid #30363D;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #D0D7DE;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    background-color: #FFFFFF;
+    cursor: text;
+    color: #0D1117;
+}
+
+body.dark input {
+    border: 1px solid #30363D;
+    background-color: #161B22;
+    color: #C9D1D9;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #362E26;
+}
+
+body.dark p {
+    color: #C9D1D9;
+}
+
+img {
+    pointer-events: none;
+}
+
+#normal-img {
+    margin-left: -587px;
+    opacity: 1;
+    position: absolute;
+}
+
+.show-normal {
+    animation: normal_show 0.2s forwards;
+}
+
+.hide-normal {
+    animation: normal_hide 0.2s forwards;
+}
+
+@keyframes normal_show {
+    from {
+        opacity: 0;
+        margin-left: -987px;
+    }
+    to {
+        opacity: 1;
+        margin-left: -587px;
+    }
+}
+
+@keyframes normal_hide {
+    from {
+        opacity: 1;
+        margin-left: -587px
+    }
+    to {
+        opacity: 0;
+        margin-left: -987px;
+    }
+}
+
+#admin-img {
+    margin-top: -35px;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+
+.show-admin {
+    animation: admin_show 0.2s forwards;
+}
+
+.hide-admin {
+    animation: admin_hide 0.2s forwards;
+}
+
+@keyframes admin_show {
+    from {
+        opacity: 0;
+        margin-left: 896px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 496px;
+    }
+}
+
+@keyframes admin_hide {
+    from {
+        opacity: 1;
+        margin-left: 496px;
+    }
+    to {
+        opacity: 0;
+        margin-left: 896px;
+    }
+}
+
+#login-button {
+    color: #2DA44E;
+}
+
+span {
+    color: #362E26;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+body.dark span {
+    color: white;
+}
+
+#admin-button {
+    color: #D0D7DE;
+    width: 42px;
+    height: 42px;
+    margin-top: 173px;
+    margin-left: 228px;
+}
+
+body.dark #admin-button {
+    color: #30363D;
+}
+
+body.dark #changebutton {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 1px;
+    outline: 0;
+    background-color: transparent;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 40px 40px currentColor inset, 0 0 0 0 currentColor;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 5px 0 currentColor inset, 0 0 5px 2px currentColor;
+}
+
+button:active {
+    background-color: currentColor;
+}

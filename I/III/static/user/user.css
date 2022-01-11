@@ -1,0 +1,183 @@
+* {
+    border-radius: 0px;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #362E26;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+
+/* Files Screen */
+
+.searchdiv {
+    height: auto !important;
+    border: none !important;
+    background-color: transparent !important;
+    overflow: visible !important;
+}
+
+.searchButton {
+    min-width: 53px;
+    width: 53px;
+    height: auto;
+}
+
+.uploaddiv {
+    height: auto !important;
+    border: none !important;
+    background-color: transparent !important;
+    overflow: visible !important;
+}
+
+#selectFile {
+    width: 200px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#selectedFile {
+    width: 100%;
+    line-height: 40px;
+}
+
+.uploadButton {
+    min-width: 53px;
+    width: 53px;
+    height: auto;
+}
+
+.filelist {
+    width: 100%;
+    height: calc(100vh - 155px);
+    background-color: transparent;
+    border-radius: 6px;
+    overflow: hidden;
+    overflow-y: scroll;
+    list-style: none;
+}
+
+.fileitem {
+    height: 42px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    background-color: #F6F8FA;
+    border: 1px solid #D8DEE4;
+    border-radius: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    display: flex;
+}
+
+.fileitem.expand {
+    height: 260px;
+}
+
+.fileitem div {
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+}
+
+.IDitem {
+    min-width: 60px;
+    width: 60px !important;
+    max-width: 60px;
+    font-weight: 600;
+    background-color: #D8DEE4;
+}
+
+.summary {
+    overflow-y: scroll !important;
+}
+
+.downloadButton {
+    min-width: 53px;
+    width: 53px;
+    height: 32px;
+    margin: 4px;
+    margin-right: 10px;
+}
+
+.expandButton {
+    min-width: 53px;
+    width: 53px;
+    height: auto;
+    border-radius: 0px;
+}
+
+.expandButton.expand img {
+    transform: rotate(180deg);
+}
+
+
+/* Standarts */
+
+input {
+    width: 100%;
+    height: 45px;
+    background-color: #F6F8FA;
+    border: 1px solid #D8DEE4;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 10px;
+    outline: none;
+    cursor: text;
+}
+
+button {
+    outline: 0;
+    color: #D8DEE4;
+    background-color: transparent;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 40px 40px currentColor inset, 0 0 0 0 currentColor;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 5px 0 currentColor inset, 0 0 5px 2px currentColor;
+}
+
+button:active {
+    background-color: currentColor;
+}
+
+
+/* MAGIC TOUCHES */
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+img {
+    pointer-events: none;
+}
+
+hr {
+    height: 3px;
+    border: 1px solid #D8DEE4;
+    border-radius: 100px;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    background-color: #D8DEE4;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}

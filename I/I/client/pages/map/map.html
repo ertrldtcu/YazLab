@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harita Ekranı</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+
+    <div id="map"></div>
+    <div class="customerDiv">
+        <input id="customerName" type="text" placeholder="müşteri ismi"> <br>
+        <input id="lat" type="number" placeholder="lat:">
+        <input id="lng" type="number" placeholder="lng:"> <br>
+        <button id="addCargo">Ekle</button>
+    </div>
+
+    <script src="map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOFjJDnZpOZ91DkyugLyByzLrSIddhRXw&callback=initMap"></script>
+
+</body>
+
+</html>

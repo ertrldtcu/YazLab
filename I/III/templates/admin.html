@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Ekranı</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='admin/admin.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='admin/admin.js')}}" defer></script>
+</head>
+
+<body>
+    <ul class="tabs">
+        <li data-tab-target="#users" class="tab active">Kullanıcılar</li>
+        <li data-tab-target="#files" class="tab">Dosyalar</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="users" data-tab-content class="active">
+            <form class="useritem adduserdiv" method="POST">
+                <input id="username" name="username" placeholder="kullanıcı adı">
+                <input id="password" name="password" type="password" placeholder="şifre">
+                <button class="adduserButton" name="adduserbutton"><img src="{{url_for('static', filename='admin/adduser.png')}}"></button>
+            </form>
+            <hr>
+            <ul class="userlist">
+                {% for user in users %}
+                <form class="useritem" method="POST">
+                    <input type="text" hidden="hidden" name="remove_user_id" value={{user.id}}>
+                    <div class="IDitem">{{user.id}}</div>
+                    <div class="usernameitem">{{user.username}}</div>
+                    <button type="button" class="editButton"><img src="{{url_for('static', filename='admin/edit.png')}}"></button>
+                    <button class="deleteButton"><img src="{{url_for('static', filename='admin/remove.png')}}"></button>
+                </form>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="files" data-tab-content>
+            <div class="fileitem searchdiv">
+                <input id="usernames" type="text" placeholder="kullanıcı adı">
+                <input id="student" type="text" placeholder="öğrenci(ler)">
+                <input id="lesson" type="text" placeholder="ders">
+                <input id="title" type="text" placeholder="proje adı">
+                <input id="keywords" type="text" placeholder="anahtar kelimeler">
+                <input id="period" type="text" placeholder="dönem">
+                <button class="searchButton" onclick="filter(event)"><img src="{{url_for('static', filename='admin/search.png')}}"></button>
+            </div>
+            <hr>
+            <ul id="filelist" class="filelist">
+                {% for file in files %}
+                <form class="fileitem" method="POST">
+                    <input type="text" hidden="hidden" name="file_id" value={{file.id}}>
+                    <div class="IDitem">{{file.id}}</div>
+                    <div class="usernameitemli">{{file.user_name}}</div>
+                    <div class="student">{{file.students}}</div>
+                    <div class="lesson">{{file.lesson}}</div>
+                    <div class="title">{{file.title}}</div>
+                    <div class="period">{{file.period}}</div>
+                    <div class="teachers">{{file.teachers}}</div>
+                    <div class="jury">{{file.juries}}</div>
+                    <div class="keywords">{{file.keywords}}</div>
+                    <div class="summary">{{file.summary}}</div>
+                    <button class="downloadButton"><img src="{{url_for('static', filename='admin/download.png')}}"></button>
+                    <button type="button" class="expandButton" onclick="expand(event)"><img src="{{url_for('static', filename='admin/expand.png')}}"></button>
+                </form>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

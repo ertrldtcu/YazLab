@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kullanıcı Ekranı</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='user/user.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='user/user.js')}}" defer></script>
+</head>
+
+<body>
+    <form id="uploadform" class="fileitem uploaddiv" method="POST" enctype="multipart/form-data">
+        <input id="uploadfile" name="file" type="file" hidden="hidden">
+        <button type="button" id="selectFile"><span>Dosya Seç</button></div>
+        <span id="selectedFile">henüz dosya seçilmedi..</span>
+        <button class="uploadButton"><img src="{{url_for('static', filename='user/upload.png')}}"></button>
+    </form>
+    <hr>
+    <div class="fileitem searchdiv">
+        <input id="student" type="text" placeholder="öğrenci(ler)">
+        <input id="lesson" type="text" placeholder="ders">
+        <input id="title" type="text" placeholder="proje adı">
+        <input id="keywords" type="text" placeholder="anahtar kelimeler">
+        <input id="period" type="text" placeholder="dönem">
+        <button class="searchButton" onclick="filter(event)"><img src="{{url_for('static', filename='user/search.png')}}"></button>
+    </div>
+    <hr>
+    <ul id="filelist" class="filelist">
+        {% for file in files %}
+        <form class="fileitem" method="POST">
+            <input type="text" hidden="hidden" name="file_id" value={{file.id}}>
+            <div class="IDitem">{{file.id}}</div>
+            <div class="student">{{file.students}}</div>
+            <div class="lesson">{{file.lesson}}</div>
+            <div class="title">{{file.title}}</div>
+            <div class="period">{{file.period}}</div>
+            <div class="teachers">{{file.teachers}}</div>
+            <div class="jury">{{file.juries}}</div>
+            <div class="keywords">{{file.keywords}}</div>
+            <div class="summary">{{file.summary}}</div>
+            <button class="downloadButton"><img src="{{url_for('static', filename='user/download.png')}}"></button>
+            <button type="button" class="expandButton" onclick="expand(event)"><img src="{{url_for('static', filename='user/expand.png')}}"></button>
+        </form>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

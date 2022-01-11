@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Giriş Ekranı</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='login/login.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='login/login.js')}}" defer></script>
+</head>
+
+<body>
+    <div class="main">
+        <img id="normal-img" class="show-normal" src="{{url_for('static', filename='login/normal.png')}}">
+        <div class="login">
+            <form>
+                <p style="margin-top: 60px;">Kullanıcı Adı</p>
+                <input id="username" type="text">
+                <p>Şifre</p>
+                <input id="password" type="password">
+                <button id="login-button"><span>Giriş Yap</span></button>
+            </form>
+            <button id="admin-button"><img id="changebutton" src="{{url_for('static', filename='login/adminbutton.png')}}"></button>
+        </div>
+        <img id="admin-img" src="{{url_for('static', filename='login/admin.png')}}">
+    </div>
+</body>
+
+</html>
