@@ -1,0 +1,98 @@
+* {
+    border-radius: 0;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #C9D1D9;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(#10101A, #181823);
+}
+
+.login {
+    width: 310px;
+    height: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 50px -30px #727272;
+    background-color: #0D1117;
+    border: 1px solid #30363D;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: -20px;
+    margin-left: 80px;
+}
+
+#company {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #30363D;
+    background-color: #161B22;
+    color: #C9D1D9;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    cursor: text;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #C9D1D9;
+}
+
+#login-button {
+    margin-top: 170px;
+    height: 40px;
+    color: #2DA44E;
+}
+
+span {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    outline: 0;
+    background-color: transparent;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 40px 40px currentColor inset, 0 0 0 0 currentColor;
+    transition: all 150ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 5px 0 currentColor inset, 0 0 5px 2px currentColor;
+}
+
+button:active {
+    background-color: currentColor;
+}
