@@ -18,7 +18,7 @@ db = SQLAlchemy(app)
 
 class users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(32), nullable=False)
+    mail = db.Column(db.String(32), nullable=False)
     password = db.Column(db.String(32), nullable=False)
     is_admin = db.Column(db.Integer)
 

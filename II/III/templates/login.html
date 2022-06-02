@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ENG">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giriş Ekranı</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login/login.css') }}">
+</head>
+
+<body>
+<div class="login">
+    <div style="display: flex; margin-top: 30px; margin-bottom: 50px;">
+        <svg class="logo" viewBox="0 0 488 600" fill="white">
+            <path d="M488 464.539H354.87V599.274L488 464.539Z"/>
+            <path d="M488 37.4541C488 16.7515 471.249 0 450.546 0H37.4541C16.7711 0 0 16.7515 0 37.4541V561.82C0 582.522 16.7701 599.274 37.4541 599.274H316.773V441.035C316.773 430.683 325.148 422.308 335.5 422.308H488V37.4541ZM56.3077 93.8462H244V136.077H56.3077V93.8462V93.8462ZM56.3077 211.154H244V253.384H56.3077V211.154V211.154ZM244 488H56.3077V445.769H244V488ZM422.308 370.693H56.3077V328.462H422.308V370.693ZM422.308 253.385H305.001V93.8462H422.308V253.385Z"/>
+        </svg>
+        <p class="company">Akademik Bilgi<br>Sistemleri</p>
+    </div>
+    <form method="POST">
+        <p>Mail</p>
+        <input name="username" type="text">
+        <p>Şifre</p>
+        <input name="password" type="password">
+        <button id="login-button" onclick="try_login()"><span>Giriş Yap</span></button>
+    </form>
+
+</div>
+
+</body>
+
+</html>

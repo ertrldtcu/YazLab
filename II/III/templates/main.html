@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ENG">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/main.css') }}">
+</head>
+
+<body>
+<div class="searchbar">
+    <div class="custom-select">
+        <input list="authors" id="author" placeholder="araştırmacı seçiniz">
+        <datalist id="authors">
+            <option value="tüm araştırmacılar..">
+                {% for author in authors %}
+                    <option>{{ author }}</option>
+                {% endfor %}
+        </datalist>
+        <span class="custom-arrow"></span>
+    </div>
+    <div class="custom-select">
+        <input list="names" id="name" placeholder="yayın adı seçiniz">
+        <datalist id="names">
+            <option value="tüm yayınlar..">
+                {% for name in names %}
+                    <option>{{ name }}</option>
+                {% endfor %}
+        </datalist>
+        <span class="custom-arrow"></span>
+    </div>
+    <div class="custom-select">
+        <input list="years" id="year" placeholder="yayın yılı seçiniz">
+        <datalist id="years">
+            <option value="tüm yıllar..">
+                {% for year in years %}
+                    <option>{{ year }}</option>
+                {% endfor %}
+        </datalist>
+        <span class="custom-arrow"></span>
+    </div>
+    <button id="search-button" onclick="search()"><span>Sorgula</span></button>
+    <a href="http://127.0.0.1:5000/login">
+        <button id="loginButton" name="logout"><img src="{{ url_for('static', filename='main/login.png') }}">
+        </button>
+    </a>
+</div>
+
+<ul id="list" class="results">
+    {#    {% for id in range(50) %}#}
+    {#    <div class="publication">#}
+    {#        <div class="ID">#{{ id }}</div>#}
+    {#        <div>Fulya Akdeniz</div>#}
+    {#        <div>Yayın Adı</div>#}
+    {#        <div>Yayın Yeri</div>#}
+    {#        <div>Yayın Yılı</div>#}
+    {#        <div>Yayın Türü</div>#}
+    {#    </div>#}
+    {#    {% endfor %}#}
+</ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+<script src="{{ url_for('static', filename='main/main.js') }}"></script>
+</body>
+
+</html>

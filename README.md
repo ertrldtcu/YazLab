@@ -104,7 +104,7 @@ Bu projede bizden, yapılan projelerin sisteme yüklenebildiği ve raporun temel
 <details>
 <summary>TR</summary>
 
-Bu projede bizden, kullanıcıların kendilerine ait araçların belli saat aralıklarındaki rotalarını harita üzerinde göstermemiz istenmiştir. Araç bilgileri daha önceden hazırlanmış CSV tipindeki dosyadan okunacaktır. Dosyadan okuma işlemi sanki anlık olarak bir araçtan GPS verisi geliyormuş gibi olacaktır, verileri dosyadan direkt okumak yerine zaman gecikmesi koyarak simüle etmemiz gerekmektedir.  Detaylı bilgi için [tıklayınız](https://github.com/ertrldtcu/YazLab/blob/master/II/I/proje1.pdf).
+Bu projede bizden, kullanıcıların kendilerine ait araçların belli saat aralıklarındaki rotalarını harita üzerinde göstermemiz istenmiştir. Araç bilgileri daha önceden hazırlanmış CSV tipindeki dosyadan okunacaktır. Dosyadan okuma işlemi sanki anlık olarak bir araçtan GPS verisi geliyormuş gibi olacaktır, verileri dosyadan direkt okumak yerine zaman gecikmesi koyarak simüle etmemiz gerekmektedir. Detaylı bilgi için [tıklayınız](https://github.com/ertrldtcu/YazLab/blob/master/II/I/proje1.pdf).
 
 </details>
 

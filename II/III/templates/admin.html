@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ENG">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yönetici Ekranı</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/admin.css') }}">
+</head>
+
+<body>
+<div class="admin">
+    <div style="display: flex; margin-top: 30px; margin-bottom: 60px;">
+        <svg class="logo" viewBox="0 0 488 600" fill="white">
+            <path d="M488 37.4541C488 16.7515 471.249 0 450.546 0H37.4541C16.7711 0 0 16.7515 0 37.4541V561.82C0 582.522 16.7701 599.274 37.4541 599.274H293.5C293.5 599.274 316.773 599.274 316.773 570.5C316.773 552.5 316.773 519.5 316.773 519.5H272.5V392H416.5V422.308H472.5C472.5 422.308 488 422.308 488 403.5C488 392 488 37.4541 488 37.4541ZM56.3077 93.8462H244V136.077H56.3077V93.8462ZM56.3077 211.154H244V253.384H56.3077V211.154ZM244 488H56.3077V445.769H244V488ZM422.308 370.693H56.3077V328.462H422.308V370.693ZM422.308 253.385H305.001V93.8462H422.308V253.385Z"
+                  fill="white"></path>
+            <path d="M347 334C276.308 334 219 391.308 219 462C219 532.692 276.308 590 347 590C417.692 590 475 532.692 475 462C475 391.308 417.692 334 347 334ZM411 475.714H360.714V526H333.286V475.714H283V448.286H333.285V398H360.714V448.285H411V475.714Z"
+                  fill="white"></path>
+        </svg>
+        <p class="company">Yeni Veri<br>Ekleme</p>
+    </div>
+    <input id="author" type="text" placeholder="araştırmacı adı soyadı">
+    <input id="name" type="text" placeholder="yayın adı">
+    <input id="year" type="text" placeholder="yayın yılı">
+    <input id="journal" type="text" placeholder="yayın yeri">
+    <input id="type" type="text" placeholder="türü">
+    <hr>
+    <input id="coauthor1" type="text" placeholder="katkıda bulunan (opsiyonel)">
+    <input id="coauthor2" type="text" placeholder="katkıda bulunan (opsiyonel)">
+    <input id="coauthor3" type="text" placeholder="katkıda bulunan (opsiyonel)">
+    <div style="display: flex; margin-top: 30px; margin-bottom: 70px;">
+        <button id="add" onclick="add()"><span>Ekle</span></button>
+        <form method="POST">
+            <button id="logoutButton" name="logout"><img src="{{ url_for('static', filename='admin/logout.png') }}">
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+<script src="{{ url_for('static', filename='admin/admin.js') }}"></script>
+
+</body>
+
+</html>
